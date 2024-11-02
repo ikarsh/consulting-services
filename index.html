@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <title>קרשון שירותי ייעוץ - הכי טובים בתחום!</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            font-family: "Comic Sans MS", cursive;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size: 20px;"><text y="18">👆</text></svg>'), auto;
+        }
+
+        .header {
+            background-color: yellow;
+            padding: 20px;
+            border: 5px groove blue;
+            animation: rainbow 2s infinite;
+            position: relative;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .fancy-button {
+            background: linear-gradient(90deg, #ff0000, #00ff00);
+            border: 3px outset silver;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            color: white;
+            text-shadow: 2px 2px black;
+            animation: pulse 1s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fancy-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(transparent, white, transparent);
+            opacity: 0.5;
+            transform: rotate(45deg);
+            animation: shine 2s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        .marquee {
+            background: black;
+            color: lime;
+            padding: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .construction {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background: repeating-linear-gradient(45deg, yellow, yellow 10px, black 10px, black 20px);
+            border: 5px solid red;
+            display: none;
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px black;
+            z-index: 1000;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes rainbow {
+            0% {
+                border-color: red;
+            }
+
+            33% {
+                border-color: yellow;
+            }
+
+            66% {
+                border-color: blue;
+            }
+
+            100% {
+                border-color: red;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .visitor-counter {
+            background: black;
+            color: red;
+            padding: 10px;
+            font-family: monospace;
+            display: inline-block;
+            margin: 20px;
+            border: 2px solid red;
+        }
+
+        .spinning-logo {
+            animation: spin 3s linear infinite;
+            width: 100px;
+            height: 100px;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .star {
+            position: absolute;
+            animation: twinkle 1s infinite;
+            font-size: 20px;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .guestbook {
+            background: white;
+            border: 3px inset gray;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+
+        .new {
+            position: relative;
+            display: inline-block;
+        }
+
+        .new::after {
+            content: 'חדש!';
+            position: absolute;
+            top: -10px;
+            right: -30px;
+            background: red;
+            color: yellow;
+            padding: 2px 5px;
+            font-size: 12px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            49% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #webring {
+            margin: 20px;
+            padding: 10px;
+            background: #000080;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .best-viewed {
+            font-family: monospace;
+            background: #000;
+            color: #0f0;
+            padding: 5px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🌟 קרשון שירותי ייעוץ 🌟</h1>
+        <h2>המומחים שלכם לכל דבר!</h2>
+        <img src="/api/placeholder/100/100" alt="לוגו מסתובב" class="spinning-logo" />
+    </div>
+
+    <marquee class="marquee" scrollamount="10" direction="right">
+        ⭐️ ברוכים הבאים לאתר החדשני והמתקדם ביותר! אנחנו כאן בשבילכם 24/7! ⭐️
+        *** מבצע מיוחד לחודש הקרוב! *** התקשרו עכשיו! ***
+    </marquee>
+
+    <div class="button-container">
+        <button class="fancy-button" onclick="showConstruction()">כניסה לחשבון</button>
+        <button class="fancy-button new" onclick="showConstruction()">הרשמה</button>
+        <button class="fancy-button" onclick="showConstruction()">הסדרת חובות</button>
+        <button class="fancy-button" onclick="showConstruction()">הגשת תלונה</button>
+        <button class="fancy-button" onclick="showConstruction()">צור קשר</button>
+        <button class="fancy-button new" onclick="showConstruction()">שירות לקוחות</button>
+        <button class="fancy-button" onclick="showConstruction()">מידע נוסף</button>
+        <button class="fancy-button" onclick="showConstruction()">שאלות נפוצות</button>
+    </div>
+
+    <div id="constructionMessage" class="construction">
+        <p>🚧 האתר בבניה 🚧</p>
+        <p>אנא צרו קשר והנציגה הדיגיטלית צילדה תשמח לסייע לכם</p>
+        <p>🤗</p>
+        <button onclick="this.parentElement.style.display='none'"
+            style="background: red; color: white; border: 3px outset gray; padding: 5px 10px; margin-top: 10px;">
+            סגור
+        </button>
+    </div>
+
+    <div class="guestbook">
+        <h3>✍️ ספר האורחים ✍️</h3>
+        <p>"וואו! איזה אתר מדהים!" - דני, תל אביב</p>
+        <p>"הנציגה צילדה ממש עזרה!" - רונית, חיפה</p>
+        <button class="fancy-button" onclick="showConstruction()">הוסף תגובה</button>
+    </div>
+
+    <div class="visitor-counter">
+        מספר מבקרים באתר: <span id="counter">12345678</span>
+    </div>
+
+    <div id="webring">
+        🔄 חלק מטבעת האתרים הישראלית 🔄
+    </div>
+
+    <div class="best-viewed">
+        האתר מותאם לדפדפן Netscape Navigator 4.0
+    </div>
+
+    <script>
+        // הוספת כוכבים מהבהבים
+        for (let i = 0; i < 10; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.innerHTML = '⭐';
+            document.body.appendChild(star);
+        }
+
+        function showConstruction() {
+            const message = document.getElementById('constructionMessage');
+            message.style.display = 'block';
+        }
+
+        // מונה מבקרים מזויף שגדל כל הזמן
+        setInterval(() => {
+            const counter = document.getElementById('counter');
+            counter.textContent = (parseInt(counter.textContent) + Math.floor(Math.random() * 5)).toString();
+        }, 3000);
+    </script>
+</body>
+
+</html>
